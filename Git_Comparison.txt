@@ -1,0 +1,32 @@
+
+Git states / Git areas
+Untracked	Staged		Modified	Unmodified/ Committed
+Files un-	Files marked	Comitted	Files which came from the
+tracked		for commit	Files which	status Staged
+				were modified
+
+
+
+commands:
+git init 			creating a repository at a local directory, all files within stay untracked
+
+git add filename		specific file in the directory moves from untracked into staged
+git add *.jpg			all JPG images in the local directory move from untracked into staged
+git add . 			all files in the local directory move from untracked into staged
+
+git commit			all files which are staged will be committed and change their status to unmodified
+git commit -m "message" 	same like above but also with message to specify what was changed
+
+git rm filename			file will be removed from the drive/ disk
+git rm --cached filename	file will be removed from the version control but remains in the directory
+
+git HEAD --filename		file will be removed from the staging area
+
+
+
+
+
+
+
+
+
