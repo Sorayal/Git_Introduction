@@ -7,8 +7,10 @@ tracked		for commit	Files which	status Staged
 
 
 
-commands:
+commands for console:
 git init 						creating a repository at a local directory, all files within stay untracked
+
+git status						Gives status about the repository, which files are untracked or staged
 
 git add filename					specific file in the directory moves from untracked into staged
 git add *.jpg						all JPG images in the local directory move from untracked into staged
@@ -32,17 +34,22 @@ git clone <url><alias>					Takes a copy from the remote repository with all vers
 
 git push origin/<branch>				Files, which were committed to the local repository, will be pushed to the remote repository
 							This means the changes which were made on the files, will appear also remotely. Example: git push origin/master
+git push -u origin/<branch>				This -u will also set up the upload branch.
 
 git fetch origin					Changed files will be fetched from the remote repository, but the local repository won´t be changed yet
 git merge origin/<branch>				Fetched changes will be merged with the local repository
 
 git pull origin/<branch>				This commands binds the two commands fetch and merge together. So the changes from the remote repository will
 							be fetched and these changes will be merged with the local repository
+git pull origin/<branch> --allow-unrelated-histories	This command accepts unrelated histories which will happen if a new remote repo was created with Readme file.
+							The merge will respond in that case with an error without allowance
 
 git branch -m new-branch-name				This renames the current branch
 git branch -m old-branch-name new-branch-name		This is used to rename a branch, if you are on a different branch
 git push origin :old-branch-name new-branch-name	The local branch name will be used to rename the remote branch name
 git push origin -u new-branch-name			This will reset the upstream branch for the new renamed local branch
+
+
 
 
 
